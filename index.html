@@ -1,0 +1,1079 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>Retrospect — 70s & 80s Live Band in Florida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #FFFBF3;
+    --bg-2: #FFF3E2;
+    --surface: #FFFFFF;
+    --surface-2: #FFF8EC;
+    --ink: #1B1E2A;
+    --ink-2: #3E4459;
+    --muted: #6B7186;
+    --line: #EADBC6;
+    --line-strong: #DDC6A3;
+    --brand: #E44E1B;
+    --brand-2: #FF7A2E;
+    --gold: #C08A1A;
+    --gold-light: #FFE9B8;
+    --teal: #0F766E;
+    --teal-light: #CCFBF1;
+    --nav-bg: rgba(255,251,243,.92);
+    --shadow: 0 16px 40px rgba(27,30,42,.08), 0 2px 8px rgba(27,30,42,.06);
+    --shadow-lg: 0 24px 60px rgba(27,30,42,.12);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg: #0F1117;
+      --bg-2: #171923;
+      --surface: #1A1D2B;
+      --surface-2: #222538;
+      --ink: #F6F1E6;
+      --ink-2: #D8D2C2;
+      --muted: #9AA0B3;
+      --line: #2C2F42;
+      --line-strong: #3A3D55;
+      --brand: #FF6B35;
+      --brand-2: #FF8A4A;
+      --gold: #E8B84B;
+      --gold-light: #2C2410;
+      --teal: #2DD4BF;
+      --teal-light: #0F2E2A;
+      --nav-bg: rgba(15,17,23,.9);
+      --shadow: 0 16px 40px rgba(0,0,0,.35);
+      --shadow-lg: 0 24px 60px rgba(0,0,0,.45);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"DM Sans", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  img{display:block; max-width:100%}
+
+  /* Nav */
+  .nav{
+    position:sticky; top:0; z-index:20;
+    backdrop-filter: blur(14px);
+    background:var(--nav-bg);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1120px; margin:0 auto;
+    padding:12px 20px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .brandmark{
+    display:flex; align-items:center; gap:10px; text-decoration:none; font-weight:900; letter-spacing:-.02em;
+  }
+  .brandmark img{width:36px; height:36px; border-radius:8px; object-fit:cover; border:1px solid var(--line)}
+  .brandmark span{font-size:17px}
+  .brandmark small{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); font-weight:700; margin-left:2px}
+  .nav-links{display:flex; gap:4px; align-items:center; flex-wrap:wrap; justify-content:flex-end}
+  .nav-links a{
+    text-decoration:none; font-size:14px; font-weight:600; color:var(--ink-2);
+    padding:8px 12px; border-radius:999px;
+  }
+  .nav-links a:hover{background:var(--surface-2); color:var(--ink)}
+  .nav-cta{
+    background:var(--ink); color:var(--bg) !important; padding:9px 16px !important;
+  }
+  @media (prefers-color-scheme: dark){ .nav-cta{background:var(--brand); color:white !important} }
+  @media (max-width:640px){
+    .nav-links a:not(.nav-cta){display:none}
+    .brandmark small{display:none}
+  }
+
+  .wrap{max-width:1120px; margin:0 auto; padding:0 20px}
+
+  /* Hero */
+  .hero{
+    padding:28px 0 12px;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns: 1.05fr .95fr; gap:28px; align-items:stretch;
+  }
+  @media (max-width:860px){ .hero-grid{grid-template-columns:1fr} }
+
+  .hero-copy{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:24px;
+    padding:28px 28px 24px;
+    box-shadow:var(--shadow);
+    display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:11px; letter-spacing:.16em; text-transform:uppercase; font-weight:800; color:var(--brand);
+  }
+  .eyebrow::before{content:""; width:22px; height:2px; background:var(--brand); display:inline-block; border-radius:2px}
+  h1{
+    font-family:"DM Serif Display", Georgia, serif;
+    font-weight:400;
+    font-size: clamp(42px, 6vw, 68px);
+    line-height:.95;
+    letter-spacing:-.02em;
+    margin:14px 0 14px;
+  }
+  h1 em{font-style:italic; color:var(--brand)}
+  .hero-lede{
+    font-size:18px; line-height:1.5; color:var(--ink-2); margin:0;
+    max-width:520px;
+  }
+  .hero-lede strong{color:var(--ink)}
+  .hero-actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:22px}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    text-decoration:none; font-weight:700; font-size:15px;
+    padding:13px 20px; border-radius:999px; border:1px solid transparent;
+    transition:.15s;
+  }
+  .btn-primary{background:var(--brand); color:white; box-shadow:0 8px 20px rgba(228,78,27,.25)}
+  .btn-primary:hover{background:#C93E12; transform:translateY(-1px)}
+  .btn-secondary{background:transparent; border-color:var(--line-strong); color:var(--ink)}
+  .btn-secondary:hover{background:var(--surface-2)}
+  .btn-facebook{background:#1877F2; color:white; border-color:#1877F2; box-shadow:0 8px 20px rgba(24,119,242,.25)}
+  .btn-facebook:hover{background:#166AE0; transform:translateY(-1px)}
+  .btn-facebook svg, .fb-inline svg{width:18px; height:18px; fill:currentColor; flex-shrink:0; display:block}
+  .fb-inline{display:inline-flex; align-items:center; gap:6px; text-decoration:none; font-weight:700; color:var(--ink)}
+  .fb-inline:hover{color:#1877F2}
+  .hero-meta{
+    margin-top:22px; padding-top:18px; border-top:1px dashed var(--line);
+    display:flex; flex-wrap:wrap; gap:10px 18px; font-size:13px; color:var(--muted); font-weight:600;
+  }
+  .hero-meta span{display:inline-flex; align-items:center; gap:6px}
+  .dot{width:6px; height:6px; border-radius:50%; background:var(--teal); display:inline-block}
+
+  .hero-visual{
+    border-radius:24px; overflow:hidden; position:relative;
+    border:1px solid var(--line-strong); background:#111827; min-height:420px;
+    box-shadow:var(--shadow-lg);
+  }
+  .hero-visual img.logo{
+    width:100%; height:100%; object-fit:cover; display:block;
+    aspect-ratio:1/1;
+  }
+  @media (max-width:860px){ .hero-visual{min-height:0} .hero-visual img.logo{aspect-ratio:4/3} }
+  .hero-badge{
+    position:absolute; left:16px; right:16px; bottom:16px;
+    background: rgba(10,12,20,.78); backdrop-filter: blur(10px);
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:16px; padding:14px 16px;
+    display:flex; justify-content:space-between; gap:12px; align-items:center;
+    color:white;
+  }
+  .hero-badge strong{font-size:14px; line-height:1.2; display:block}
+  .hero-badge small{font-size:12px; opacity:.8; line-height:1.3; display:block; margin-top:2px}
+  .badge-pill{
+    flex-shrink:0; font-size:11px; letter-spacing:.12em; text-transform:uppercase; font-weight:800;
+    background:var(--brand); color:white; padding:8px 10px; border-radius:999px; white-space:nowrap;
+  }
+  @media (max-width:480px){ .hero-badge{flex-direction:column; align-items:flex-start} }
+
+  /* Venue strip */
+  .venue-strip{
+    margin:18px 0 0;
+    background:var(--ink); color:var(--bg);
+    border-radius:16px; padding:14px 16px;
+    overflow:hidden;
+  }
+  @media (prefers-color-scheme: dark){ .venue-strip{background:#1E2133; color:var(--ink); border:1px solid var(--line)} }
+  .venue-strip-inner{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+  .venue-label{font-size:11px; letter-spacing:.14em; text-transform:uppercase; font-weight:800; opacity:.7; white-space:nowrap}
+  .venue-list{display:flex; flex-wrap:wrap; gap:8px}
+  .venue-list span{
+    font-size:13px; font-weight:600; padding:6px 10px; border-radius:999px;
+    border:1px solid rgba(255,255,255,.18); background:rgba(255,255,255,.06);
+  }
+  @media (prefers-color-scheme: dark){ .venue-list span{border-color:var(--line); background:var(--surface-2)} }
+
+  /* Sections */
+  section{padding:36px 0 8px}
+  .section-head{
+    display:flex; justify-content:space-between; align-items:flex-end; gap:16px; margin-bottom:18px;
+  }
+  .section-head h2{
+    font-family:"DM Serif Display", Georgia, serif; font-weight:400;
+    font-size: clamp(30px, 4vw, 42px); line-height:1; margin:6px 0 0; letter-spacing:-.02em;
+  }
+  .section-head p{margin:0; color:var(--muted); max-width:460px; font-size:15px; line-height:1.5}
+  @media (max-width:700px){ .section-head{flex-direction:column; align-items:flex-start} }
+
+  .about-grid{
+    display:grid; grid-template-columns: 1.2fr .8fr; gap:16px;
+  }
+  @media (max-width:800px){ .about-grid{grid-template-columns:1fr} }
+  .card{
+    background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:22px;
+    box-shadow:var(--shadow);
+  }
+  .card h3{margin:0 0 8px; font-size:18px; letter-spacing:-.01em}
+  .card p{margin:0; color:var(--ink-2); font-size:15px; line-height:1.6}
+  .card p + p{margin-top:10px}
+  .stat-row{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:16px}
+  .stat{
+    background:var(--surface-2); border:1px solid var(--line); border-radius:14px; padding:14px;
+  }
+  .stat strong{font-family:"DM Serif Display",serif; font-size:28px; line-height:1; display:block}
+  .stat span{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:700}
+
+  .sound-list{
+    display:grid; grid-template-columns: repeat(3, 1fr); gap:12px;
+  }
+  @media (max-width:800px){ .sound-list{grid-template-columns:1fr} }
+  .sound-item{
+    border-radius:18px; padding:18px; border:1px solid var(--line); background:var(--surface);
+    display:flex; gap:14px;
+  }
+  .sound-num{
+    font-family:"DM Serif Display",serif; font-size:32px; line-height:1; color:var(--brand); flex-shrink:0;
+  }
+  .sound-item h4{margin:0 0 4px; font-size:16px}
+  .sound-item p{margin:0; font-size:14px; color:var(--muted); line-height:1.5}
+
+  /* Audio player */
+  .music-player{
+    background:var(--surface); border:1px solid var(--line-strong); border-radius:22px;
+    box-shadow:var(--shadow-lg); overflow:hidden;
+    display:grid; grid-template-columns: 200px 1fr; margin-bottom:16px;
+  }
+  @media (max-width:700px){ .music-player{grid-template-columns:1fr} }
+  .player-cover{background:#111827; min-height:200px}
+  .player-cover img{width:100%; height:100%; object-fit:cover; display:block; aspect-ratio:1/1}
+  @media (max-width:700px){ .player-cover img{aspect-ratio:16/9} }
+  .player-main{padding:22px 22px 20px; display:flex; flex-direction:column; justify-content:center; gap:14px}
+  .player-kicker{font-size:11px; letter-spacing:.14em; text-transform:uppercase; font-weight:800; color:var(--brand)}
+  .player-title{font-family:"DM Serif Display",serif; font-size:28px; line-height:1; margin:4px 0 4px; letter-spacing:-.01em}
+  .player-sub{font-size:14px; color:var(--muted); line-height:1.5; margin:0}
+  .player-controls{display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:4px}
+  .play-btn{
+    width:56px; height:56px; border-radius:50%; border:0; cursor:pointer; flex-shrink:0;
+    background:var(--brand); color:white; display:grid; place-items:center;
+    box-shadow:0 10px 22px rgba(228,78,27,.28);
+  }
+  .play-btn:active{transform:scale(.97)}
+  .play-btn svg{width:22px; height:22px; fill:white; display:block}
+  .player-progress-wrap{flex:1; min-width:180px}
+  .progress-track{
+    height:8px; background:var(--line); border-radius:999px; overflow:hidden; cursor:pointer; position:relative;
+  }
+  .progress-fill{height:100%; width:0%; background:var(--brand); border-radius:999px; transition:width .15s linear}
+  .time-row{display:flex; justify-content:space-between; gap:8px; margin-top:7px; font-size:12px; font-weight:700; color:var(--muted); letter-spacing:.02em}
+  .player-actions{display:flex; gap:8px; flex-wrap:wrap; align-items:center}
+  .dl-btn{
+    display:inline-flex; align-items:center; gap:6px; text-decoration:none;
+    font-size:13px; font-weight:700; padding:9px 13px; border-radius:999px;
+    border:1px solid var(--line-strong); background:var(--surface); color:var(--ink);
+  }
+  .dl-btn:hover{background:var(--surface-2)}
+  .player-note{font-size:13px; color:var(--muted); line-height:1.5; margin:0}
+  .player-note strong{color:var(--ink)}
+  .music-player audio.fallback-native{display:block; width:100%; height:44px; margin-top:12px}
+
+  /* Videos */
+  .video-frame{
+    background:#0B1220; border:1px solid var(--line-strong); border-radius:22px;
+    overflow:hidden; box-shadow:var(--shadow-lg);
+    max-width:420px; margin:0 auto;
+  }
+  .video-frame video{
+    width:100%; height:auto; display:block; aspect-ratio:9/16;
+    background:#0B1220; object-fit:cover;
+  }
+  .video-caption{
+    padding:16px 20px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center;
+    background:var(--surface); border-top:1px solid var(--line);
+  }
+  .video-caption strong{font-size:16px; display:block; letter-spacing:-.01em}
+  .video-caption span{font-size:13px; color:var(--muted); line-height:1.5; display:block; margin-top:2px}
+  .video-duration{
+    flex-shrink:0; font-family:"DM Serif Display",serif; font-size:22px; line-height:1; color:var(--brand);
+  }
+
+  /* Band */
+  .members{
+    display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;
+  }
+  @media (max-width:900px){ .members{grid-template-columns:1fr} }
+  .member{
+    background:var(--surface); border:1px solid var(--line); border-radius:22px; overflow:hidden;
+    box-shadow:var(--shadow); display:flex; flex-direction:column;
+  }
+  .member-photo{
+    aspect-ratio: 4/5; overflow:hidden; background:var(--bg-2); position:relative;
+  }
+  .member-photo img{width:100%; height:100%; object-fit:cover; object-position:top center}
+  .member-photo::after{
+    content:""; position:absolute; inset:auto 0 0 0; height:40%;
+    background: linear-gradient(to top, rgba(0,0,0,.55), transparent);
+  }
+  .member-role{
+    position:absolute; left:14px; bottom:12px; z-index:1; color:white;
+    font-size:11px; letter-spacing:.14em; text-transform:uppercase; font-weight:800;
+    background:rgba(0,0,0,.35); backdrop-filter: blur(6px); border:1px solid rgba(255,255,255,.2);
+    padding:6px 9px; border-radius:999px;
+  }
+  .member-body{padding:18px 18px 20px; display:flex; flex-direction:column; gap:8px; flex:1}
+  .member-body h3{margin:0; font-size:22px; letter-spacing:-.02em; line-height:1}
+  .member-body h3 small{display:block; font-family:"DM Sans",sans-serif; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--brand); font-weight:800; margin-bottom:6px}
+  .member-body p{margin:0; font-size:14.5px; line-height:1.6; color:var(--ink-2)}
+  .member-tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:6px}
+  .member-tags span{font-size:12px; font-weight:600; padding:5px 8px; border-radius:999px; background:var(--surface-2); border:1px solid var(--line); color:var(--ink-2)}
+
+  /* Shows */
+  .show-card{
+    display:grid; grid-template-columns: 1fr 1fr; gap:0;
+    background:var(--surface); border:1px solid var(--line-strong); border-radius:22px; overflow:hidden;
+    box-shadow:var(--shadow-lg);
+  }
+  @media (max-width:820px){ .show-card{grid-template-columns:1fr} }
+  .show-date{
+    background:
+      radial-gradient(500px 260px at 20% 0%, rgba(255,122,46,.25), transparent 60%),
+      linear-gradient(150deg, #1B2340 0%, #0F766E 60%, #E44E1B 135%);
+    color:white; padding:28px; display:flex; flex-direction:column; justify-content:center; gap:10px;
+  }
+  .show-date .day{font-family:"DM Serif Display",serif; font-size:64px; line-height:.9; letter-spacing:-.02em}
+  .show-date .month-year{font-size:13px; letter-spacing:.16em; text-transform:uppercase; font-weight:800; opacity:.95}
+  .show-date .time{font-size:16px; font-weight:700; margin-top:6px}
+  .show-details{padding:26px; display:flex; flex-direction:column; justify-content:center; gap:8px}
+  .show-details h3{margin:0; font-size:26px; letter-spacing:-.02em; line-height:1.05}
+  .show-details .venue-sub{color:var(--muted); font-size:15px; margin:0; line-height:1.5}
+  .show-meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+  .show-meta span{font-size:12px; font-weight:700; padding:6px 10px; border-radius:999px; background:var(--surface-2); border:1px solid var(--line); color:var(--ink-2)}
+  .show-note{font-size:14px; color:var(--ink-2); line-height:1.55; margin:8px 0 0}
+
+  /* Gallery */
+  .gallery-grid{
+    display:grid; grid-template-columns: 1fr 1fr; gap:16px;
+  }
+  @media (max-width:800px){ .gallery-grid{grid-template-columns:1fr} }
+  .gallery-item{
+    background:var(--surface); border:1px solid var(--line); border-radius:20px; overflow:hidden; box-shadow:var(--shadow); margin:0;
+  }
+  .gallery-item img{width:100%; height:auto; display:block; background:#0B1220}
+  .gallery-item figcaption{padding:14px 16px; font-size:14px; color:var(--ink-2); line-height:1.5}
+  .gallery-item figcaption strong{color:var(--ink); display:block; font-size:15px; margin-bottom:2px}
+
+  /* Booking */
+  .booking{
+    margin:28px 0 12px;
+    border-radius:24px; overflow:hidden; border:1px solid var(--line-strong);
+    display:grid; grid-template-columns: 1.1fr .9fr;
+    background:var(--surface); box-shadow:var(--shadow-lg);
+  }
+  @media (max-width:820px){ .booking{grid-template-columns:1fr} }
+  .booking-copy{padding:28px}
+  .booking-copy h2{font-family:"DM Serif Display",serif; font-weight:400; font-size:36px; line-height:.95; margin:8px 0 10px}
+  .booking-copy p{color:var(--ink-2); margin:0; font-size:15px; line-height:1.6}
+  .booking-actions{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
+  .email-box{
+    margin-top:16px; display:flex; align-items:center; justify-content:space-between; gap:10px;
+    background:var(--surface-2); border:1px solid var(--line); border-radius:12px; padding:12px 14px;
+  }
+  .email-box code{font-size:14px; font-weight:700; word-break:break-all}
+  .copy-btn{
+    flex-shrink:0; border:1px solid var(--line-strong); background:var(--surface); padding:8px 12px; border-radius:999px;
+    font-weight:700; font-size:13px; cursor:pointer;
+  }
+  .copy-btn:active{transform:scale(.98)}
+  .booking-side{
+    background:
+      radial-gradient(600px 300px at 20% 0%, rgba(255,122,46,.28), transparent 60%),
+      linear-gradient(160deg, #1B2340 0%, #0F766E 55%, #E44E1B 130%);
+    color:white; padding:28px; display:flex; flex-direction:column; justify-content:space-between; gap:20px;
+    min-height:280px;
+  }
+  .booking-side h3{margin:0; font-size:14px; letter-spacing:.12em; text-transform:uppercase; opacity:.9}
+  .booking-side ul{margin:10px 0 0; padding:0; list-style:none; display:grid; gap:10px}
+  .booking-side li{display:flex; gap:10px; font-size:14px; line-height:1.5}
+  .booking-side li::before{content:"✓"; width:22px; height:22px; flex-shrink:0; display:grid; place-items:center; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.2); border-radius:50%; font-size:12px; font-weight:900}
+  .booking-side .fine{font-size:12px; opacity:.75; line-height:1.5}
+
+  footer{
+    padding:22px 0 36px; color:var(--muted); font-size:13px;
+  }
+  .footer-inner{
+    border-top:1px solid var(--line); padding-top:18px;
+    display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center;
+  }
+  .footer-inner a{text-decoration:none; font-weight:700; color:var(--ink)}
+  .toast{
+    position:fixed; left:50%; bottom:18px; transform:translateX(-50%) translateY(20px);
+    background:var(--ink); color:var(--bg); padding:10px 14px; border-radius:999px; font-size:13px; font-weight:700;
+    opacity:0; pointer-events:none; transition:.2s; z-index:50; box-shadow:var(--shadow-lg);
+  }
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brandmark" href="#top" aria-label="Retrospect home">
+      <img src="images/photo-01.jpg" alt="Retrospect logo" />
+      <span>RETROSPECT</span><small>Live Band • Florida</small>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#music">The Music</a>
+      <a href="#videos">Videos</a>
+      <a href="#shows">Shows</a>
+      <a href="#band">The Band</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#book" class="nav-cta">Book Us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div>
+          <div class="eyebrow">70s &amp; 80s • Dance Favorites • Classic Ballads</div>
+          <h1>Timeless hits,<br><em>live &amp; loud.</em></h1>
+          <p class="hero-lede"><strong>Retrospect</strong> is a live band specializing in the timeless hits of the 70s and 80s — dance favorites, classic ballads, and popular music from every generation. Fun, energetic, and professional, we keep audiences singing, dancing, and coming back for more.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#shows">See upcoming shows</a>
+            <a class="btn btn-secondary" href="#band">Meet the band</a>
+          </div>
+        </div>
+        <div class="hero-meta">
+          <span><span class="dot"></span> Booking private events &amp; venues</span>
+          <span>Florida</span>
+          <span>retrospectband7@gmail.com</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img class="logo" src="images/photo-02.jpg" alt="The members of Retrospect — Bill, Mary Faith Blanco, and Doy Dela Rosa — in front of the Retrospect logo" />
+        <div class="hero-badge">
+          <div>
+            <strong>Next show: Sat, Oct 17 • Paradise Waterfront Cafe</strong>
+            <small>5–8 PM in Ft. Pierce — see the Shows section below.</small>
+          </div>
+          <div class="badge-pill">Live • 70s/80s</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="venue-strip" aria-label="Venues played with our previous band">
+      <div class="venue-strip-inner">
+        <div class="venue-label">Played with our previous band</div>
+        <div class="venue-list">
+          <span>Skipper’s Cove</span>
+          <span>Sailor’s Return</span>
+          <span>E.R. Bradley’s</span>
+          <span>Hutchinson Island Bar &amp; Grill</span>
+          <span>Pickled Bar &amp; Restaurant</span>
+          <span>Private Events</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">About Retrospect</div>
+        <h2>A night that feels<br>like the best years.</h2>
+      </div>
+      <p>We bring a polished, high-energy live-music experience that keeps the room entertained and engaged — from the first ballad to the last dance.</p>
+    </div>
+
+    <div class="about-grid">
+      <article class="card">
+        <h3>Fun, energetic, and professional</h3>
+        <p>Retrospect brings a fun, energetic, and professional live-music experience that keeps audiences entertained and engaged. We also have a growing following and enjoy bringing our audience along to our shows.</p>
+        <p>Our repertoire centers on the timeless hits of the 70s and 80s — including dance favorites, classic ballads, and popular music from every generation.</p>
+        <div class="stat-row">
+          <div class="stat"><strong>70s–80s</strong><span>Core repertoire</span></div>
+          <div class="stat"><strong>Florida</strong><span>Based</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Venues played with our previous band</h3>
+        <p>Before we became Retrospect, these were venues played with our previous band, including Skipper’s Cove, Sailor’s Return, E.R. Bradley’s, Hutchinson Island Bar &amp; Grill, and Pickled Bar &amp; Restaurant, as well as private events.</p>
+        <p style="margin-top:12px">Planning a private event or looking to book a venue date? Get in touch and tell us about your event.</p>
+        <div class="hero-actions" style="margin-top:16px">
+          <a class="btn btn-primary" href="mailto:retrospectband7@gmail.com?subject=Retrospect%20—%20Date%20Check">Check a date</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SHOWS -->
+  <section id="shows">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Upcoming Shows</div>
+        <h2>Catch us live.</h2>
+      </div>
+      <p>Come dance with us — here’s where Retrospect plays next.</p>
+    </div>
+
+    <div class="show-card">
+      <div class="show-date">
+        <div class="month-year">October 2026</div>
+        <div class="day">Sat<br>17</div>
+        <div class="time">5:00 PM – 8:00 PM</div>
+      </div>
+      <div class="show-details">
+        <h3>Paradise Waterfront Cafe</h3>
+        <p class="venue-sub">Ft. Pierce, Florida</p>
+        <p class="show-note">An evening of 70s &amp; 80s dance favorites, classic ballads, and hits from every generation — live on the waterfront.</p>
+        <div class="show-meta">
+          <span>Saturday, Oct 17, 2026</span>
+          <span>5–8 PM</span>
+          <span>Paradise Waterfront Cafe · Ft. Pierce</span>
+        </div>
+        <div class="hero-actions" style="margin-top:14px">
+          <a class="btn btn-primary" href="mailto:retrospectband7@gmail.com?subject=Retrospect%20at%20Paradise%20Waterfront%20Cafe%20—%20Oct%2017">Questions? Email us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Gallery</div>
+        <h2>Posters &amp; the band.</h2>
+      </div>
+      <p>Show art and the Retrospect lineup.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <figure class="gallery-item">
+        <img src="images/photo-03.jpg" alt="Poster for Mary Faith and Retrospect live at Paradise Waterfront Cafe, Ft. Pierce" />
+        <figcaption>
+          <strong>Paradise Waterfront Cafe — Ft. Pierce</strong>
+          Mary Faith and Retrospect, live on the waterfront. Saturday, Oct 17, 2026 · 5–8 PM.
+        </figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/photo-02.jpg" alt="The members of Retrospect — Bill, Mary Faith Blanco, and Doy Dela Rosa — in front of the Retrospect logo" />
+        <figcaption>
+          <strong>The band</strong>
+          Bill “Willy Vil” (drums), Mary Faith Blanco (vocals), and Doy Dela Rosa (keyboards).
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- MUSIC -->
+  <section id="music">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">The Music</div>
+        <h2>Built for the<br>dance floor.</h2>
+      </div>
+      <p>Every set is stacked with songs people know by heart — the kind that get tables singing and strangers dancing together.</p>
+    </div>
+
+    <div class="music-player" aria-label="Listen to Retrospect">
+      <div class="player-cover">
+        <img src="images/photo-01.jpg" alt="Retrospect logo artwork" />
+      </div>
+      <div class="player-main">
+        <div>
+          <div class="player-kicker">Listen</div>
+          <div class="player-title">Tattooed On My Mind</div>
+          <p class="player-sub">4:36 — press play to hear the band.</p>
+        </div>
+
+        <audio id="trackAudio" preload="metadata" data-src="audio/tattooed-on-my-mind.mp3"><source src="audio/tattooed-on-my-mind.mp3" type="audio/mpeg"></audio>
+
+        <div class="player-controls">
+          <button class="play-btn" id="playBtn" type="button" aria-label="Play track">
+            <svg id="playIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg>
+            <svg id="pauseIcon" viewBox="0 0 24 24" aria-hidden="true" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+          </button>
+          <div class="player-progress-wrap">
+            <div class="progress-track" id="progressTrack" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="time-row"><span id="currentTime">0:00</span><span id="durationLabel">4:36</span></div>
+          </div>
+        </div>
+
+        <div class="player-actions">
+          <a class="dl-btn" href="audio/tattooed-on-my-mind.mp3" download="Retrospect-Audio-Track.mp3">
+            <span aria-hidden="true">↓</span> Download track
+          </a>
+          <span style="font-size:13px; color:var(--muted); font-weight:600">MP3 • 4:36</span>
+        </div>
+
+        <p class="player-note"><strong>Tip:</strong> Tap play and turn it up.</p>
+      </div>
+    </div>
+
+    <div class="music-player" aria-label="Listen to Retrospect">
+      <div class="player-cover">
+        <img src="images/photo-01.jpg" alt="Retrospect logo artwork" />
+      </div>
+      <div class="player-main">
+        <div>
+          <div class="player-kicker">Listen</div>
+          <div class="player-title">Just The Way You Are</div>
+          <p class="player-sub">5:35 — press play to hear the band.</p>
+        </div>
+
+        <audio id="trackAudio2" preload="metadata" data-src="audio/just-the-way-you-are.mp3"><source src="audio/just-the-way-you-are.mp3" type="audio/mpeg"></audio>
+
+        <div class="player-controls">
+          <button class="play-btn" id="playBtn2" type="button" aria-label="Play track">
+            <svg id="playIcon2" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg>
+            <svg id="pauseIcon2" viewBox="0 0 24 24" aria-hidden="true" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+          </button>
+          <div class="player-progress-wrap">
+            <div class="progress-track" id="progressTrack2" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+              <div class="progress-fill" id="progressFill2"></div>
+            </div>
+            <div class="time-row"><span id="currentTime2">0:00</span><span id="durationLabel2">5:35</span></div>
+          </div>
+        </div>
+
+        <div class="player-actions">
+          <a class="dl-btn" href="audio/just-the-way-you-are.mp3" download="Retrospect-Just-The-Way-You-Are.mp3">
+            <span aria-hidden="true">↓</span> Download track
+          </a>
+          <span style="font-size:13px; color:var(--muted); font-weight:600">MP3 • 5:35</span>
+        </div>
+
+        <p class="player-note"><strong>Tip:</strong> Tap play and turn it up.</p>
+      </div>
+    </div>
+
+    <div class="music-player" aria-label="Listen to Retrospect">
+      <div class="player-cover">
+        <img src="images/photo-01.jpg" alt="Retrospect logo artwork" />
+      </div>
+      <div class="player-main">
+        <div>
+          <div class="player-kicker">Listen</div>
+          <div class="player-title">It’s Too Late</div>
+          <p class="player-sub">3:09 — press play to hear the band.</p>
+        </div>
+
+        <audio id="trackAudio3" preload="metadata" data-src="audio/its-too-late.mp3"><source src="audio/its-too-late.mp3" type="audio/mpeg"></audio>
+
+        <div class="player-controls">
+          <button class="play-btn" id="playBtn3" type="button" aria-label="Play track">
+            <svg id="playIcon3" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg>
+            <svg id="pauseIcon3" viewBox="0 0 24 24" aria-hidden="true" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+          </button>
+          <div class="player-progress-wrap">
+            <div class="progress-track" id="progressTrack3" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+              <div class="progress-fill" id="progressFill3"></div>
+            </div>
+            <div class="time-row"><span id="currentTime3">0:00</span><span id="durationLabel3">3:09</span></div>
+          </div>
+        </div>
+
+        <div class="player-actions">
+          <a class="dl-btn" href="audio/its-too-late.mp3" download="Retrospect-Its-Too-Late.mp3">
+            <span aria-hidden="true">↓</span> Download track
+          </a>
+          <span style="font-size:13px; color:var(--muted); font-weight:600">MP3 • 3:09</span>
+        </div>
+
+        <p class="player-note"><strong>Tip:</strong> Tap play and turn it up.</p>
+      </div>
+    </div>
+
+    <div class="music-player" aria-label="Listen to Retrospect">
+      <div class="player-cover">
+        <img src="images/photo-01.jpg" alt="Retrospect logo artwork" />
+      </div>
+      <div class="player-main">
+        <div>
+          <div class="player-kicker">Listen</div>
+          <div class="player-title">Smooth Operator</div>
+          <p class="player-sub">4:12 — press play to hear the band.</p>
+        </div>
+
+        <audio id="trackAudio4" preload="metadata" data-src="audio/smooth-operator.mp3"><source src="audio/smooth-operator.mp3" type="audio/mpeg"></audio>
+
+        <div class="player-controls">
+          <button class="play-btn" id="playBtn4" type="button" aria-label="Play track">
+            <svg id="playIcon4" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg>
+            <svg id="pauseIcon4" viewBox="0 0 24 24" aria-hidden="true" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+          </button>
+          <div class="player-progress-wrap">
+            <div class="progress-track" id="progressTrack4" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+              <div class="progress-fill" id="progressFill4"></div>
+            </div>
+            <div class="time-row"><span id="currentTime4">0:00</span><span id="durationLabel4">4:12</span></div>
+          </div>
+        </div>
+
+        <div class="player-actions">
+          <a class="dl-btn" href="audio/smooth-operator.mp3" download="Retrospect-Smooth-Operator.mp3">
+            <span aria-hidden="true">↓</span> Download track
+          </a>
+          <span style="font-size:13px; color:var(--muted); font-weight:600">MP3 • 4:12</span>
+        </div>
+
+        <p class="player-note"><strong>Tip:</strong> Tap play and turn it up.</p>
+      </div>
+    </div>
+
+    <div class="music-player" aria-label="Listen to Retrospect">
+      <div class="player-cover">
+        <img src="images/photo-01.jpg" alt="Retrospect logo artwork" />
+      </div>
+      <div class="player-main">
+        <div>
+          <div class="player-kicker">Listen</div>
+          <div class="player-title">You Are The Sunshine Of My Life</div>
+          <p class="player-sub">2:39 — press play to hear the band.</p>
+        </div>
+
+        <audio id="trackAudio5" preload="metadata" data-src="audio/you-are-the-sunshine-of-my-life.mp3"><source src="audio/you-are-the-sunshine-of-my-life.mp3" type="audio/mpeg"></audio>
+
+        <div class="player-controls">
+          <button class="play-btn" id="playBtn5" type="button" aria-label="Play track">
+            <svg id="playIcon5" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg>
+            <svg id="pauseIcon5" viewBox="0 0 24 24" aria-hidden="true" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+          </button>
+          <div class="player-progress-wrap">
+            <div class="progress-track" id="progressTrack5" role="slider" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+              <div class="progress-fill" id="progressFill5"></div>
+            </div>
+            <div class="time-row"><span id="currentTime5">0:00</span><span id="durationLabel5">2:39</span></div>
+          </div>
+        </div>
+
+        <div class="player-actions">
+          <a class="dl-btn" href="audio/you-are-the-sunshine-of-my-life.mp3" download="Retrospect-You-Are-The-Sunshine-Of-My-Life.mp3">
+            <span aria-hidden="true">↓</span> Download track
+          </a>
+          <span style="font-size:13px; color:var(--muted); font-weight:600">MP3 • 2:39</span>
+        </div>
+
+        <p class="player-note"><strong>Tip:</strong> Tap play and turn it up.</p>
+      </div>
+    </div>
+
+    <div class="sound-list">
+      <div class="sound-item">
+        <div class="sound-num">01</div>
+        <div>
+          <h4>Dance favorites</h4>
+          <p>Dance favorites from the timeless hits of the 70s and 80s — the songs that get audiences up and moving.</p>
+        </div>
+      </div>
+      <div class="sound-item">
+        <div class="sound-num">02</div>
+        <div>
+          <h4>Classic ballads</h4>
+          <p>Classic ballads delivered with elegance and energy, as part of a repertoire spanning 70s &amp; 80s classics.</p>
+        </div>
+      </div>
+      <div class="sound-item">
+        <div class="sound-num">03</div>
+        <div>
+          <h4>Every generation</h4>
+          <p>Popular music from every generation, alongside the band’s focus on 70s and 80s hits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section id="videos">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Videos</div>
+        <h2>See us in action.</h2>
+      </div>
+      <p>Press play and get a feel for the room when Retrospect takes the stage.</p>
+    </div>
+
+    <div class="video-frame">
+      <video id="bandVideo" src="video/band-video.mp4" poster="images/photo-04.jpg" controls preload="metadata" playsinline aria-label="Video: Retrospect live performance"></video>
+      <div class="video-caption">
+        <div>
+          <strong>Retrospect — Live</strong>
+          <span>Mary Faith performing live with Retrospect · MP4 video</span>
+        </div>
+        <div class="video-duration">0:47</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BAND -->
+  <section id="band">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Meet the Band</div>
+        <h2>Mary Faith, Doy<br>&amp; Bill.</h2>
+      </div>
+      <p>The members featured here — with photos and bios provided by the band.</p>
+    </div>
+
+    <div class="members">
+      <!-- Mary Faith -->
+      <article class="member">
+        <div class="member-photo">
+          <img src="images/photo-05.jpg" alt="Mary Faith Blanco, lead vocalist of Retrospect" />
+          <div class="member-role">Lead Vocals</div>
+        </div>
+        <div class="member-body">
+          <h3><small>Vocals</small>Mary Faith Blanco</h3>
+          <p>Mary Faith Blanco is a powerhouse vocalist and seasoned performer whose musical journey began at age six on Philippine television. A champion of numerous singing competitions, she has performed for prime ministers, heads of state, and distinguished audiences, from elegant lounges to major concerts.</p>
+          <p>Now based in Florida, Mary Faith has performed at Skipper’s Cove, Sailor’s Return, E.R. Bradley’s, Hutchinson Island Bar &amp; Grill, Pickled Bar &amp; Restaurant, and numerous private events. Her repertoire spans 70s &amp; 80s classics, dance favorites, powerful ballads, and popular hits across generations, delivered with elegance, energy, and commanding stage presence.</p>
+          <p>A Doctor of Dental Medicine and Army Reservist in the Philippines, Mary Faith brings discipline, professionalism, and passion to every performance — creating a polished and unforgettable live-music experience.</p>
+          <div class="member-tags"><span>70s &amp; 80s Classics</span><span>Ballads</span><span>Dance Hits</span></div>
+        </div>
+      </article>
+
+      <!-- Doy -->
+      <article class="member">
+        <div class="member-photo">
+          <img src="images/photo-06.jpg" alt="Doy Dela Rosa, keyboardist of Retrospect" />
+          <div class="member-role">Keys</div>
+        </div>
+        <div class="member-body">
+          <h3><small>Keyboards</small>Doy Dela Rosa</h3>
+          <p>Doy is a seasoned, self-taught keyboardist whose musical journey began at the age of 10. With a natural ear for music and a passion for rhythm, he developed his craft through years of playing and performing, with a particular love for dance music and infectious grooves.</p>
+          <p>His musical influences include iconic electronic and alternative bands such as Depeche Mode, New Order, and The Cure, bringing a distinctive blend of melody, atmosphere, and rhythm to his playing.</p>
+          <p>Throughout his career, Doy has performed with numerous bands, including Brown Sugar Band, The Lee Riders, The Black Pearl Band, A Touch of Gray, JUZT UZ Band, Night Groove Band, Music Machine, and FLIP ZYDE Band. Today, Doy brings his experience, versatility, and love of live music to Retrospect.</p>
+          <div class="member-tags"><span>Depeche Mode</span><span>New Order</span><span>The Cure</span></div>
+        </div>
+      </article>
+
+      <!-- Bill -->
+      <article class="member">
+        <div class="member-photo">
+          <img src="images/photo-07.jpg" alt="Bill “Willy Vil”, drummer of Retrospect" />
+          <div class="member-role">Drums</div>
+        </div>
+        <div class="member-body">
+          <h3><small>Drums</small>Bill “Willy Vil”</h3>
+          <p>Bill is a seasoned drummer with a musical career spanning more than five decades. He began playing drums in the mid-1960s, developing his craft through years of performing a wide range of styles, including rock &amp; roll, classic rock, Motown, R&amp;B, and Top 40 hits.</p>
+          <p>His musical journey began in the Philippines, where he performed with groups including The Counterpoints, before continuing his career in the United States with various bands, including The Stratos and FLIP ZYDE Band.</p>
+          <p>Bill was also a member of our previous band, which has evolved into RETROSPECT. With decades of experience, a strong sense of rhythm, and an unmistakable passion for live music, Bill brings the energy, versatility, and steady groove that keep every RETROSPECT performance moving.</p>
+          <div class="member-tags"><span>Classic Rock</span><span>Motown</span><span>R&amp;B</span><span>Top 40</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <div id="book" class="booking">
+    <div class="booking-copy">
+      <div class="eyebrow">Book Retrospect</div>
+      <h2>Let’s make it<br>a night to remember.</h2>
+      <p>Tell us your date and tell us about your private event or venue. We’ll bring the timeless hits of the 70s and 80s and keep your audience entertained and engaged.</p>
+      <div class="booking-actions">
+        <a class="btn btn-primary" href="mailto:retrospectband7@gmail.com?subject=Booking%20Retrospect%20—%20Event%20Inquiry&body=Hi%20Retrospect!%0A%0AEvent%20date%3A%0AVenue%20%2F%20city%3A%0AType%20of%20event%3A%0AAnything%20else%20we%20should%20know%3A%0A">Email to book →</a>
+        <a class="btn btn-facebook" href="https://www.facebook.com/share/18SVfmnB8u/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Retrospect on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Follow on Facebook
+        </a>
+        <a class="btn btn-secondary" href="#band">See the band again</a>
+      </div>
+      <div class="email-box">
+        <code>retrospectband7@gmail.com</code>
+        <button class="copy-btn" id="copyBtn" type="button">Copy email</button>
+      </div>
+      <p style="font-size:13px; color:var(--muted); margin-top:10px">Tap “Email to book” and your mail app will open with a starter message — just fill in your details.</p>
+    </div>
+    <div class="booking-side">
+      <div>
+        <h3>What we play</h3>
+        <ul>
+          <li>Timeless hits of the 70s and 80s</li>
+          <li>Dance favorites &amp; classic ballads</li>
+          <li>Popular music from every generation</li>
+          <li>Fun, energetic, professional live music</li>
+        </ul>
+      </div>
+      <p class="fine">Based in Florida • Performed with our previous band at Skipper’s Cove, Sailor’s Return, E.R. Bradley’s, Hutchinson Island Bar &amp; Grill, Pickled Bar &amp; Restaurant, and private events.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div><strong style="color:var(--ink)">RETROSPECT</strong> — Timeless hits of the 70s &amp; 80s, live.</div>
+      <div>
+        <a href="mailto:retrospectband7@gmail.com">retrospectband7@gmail.com</a> &nbsp;•&nbsp;
+        <a class="fb-inline" href="https://www.facebook.com/share/18SVfmnB8u/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Retrospect on Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </a> &nbsp;•&nbsp; Florida
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<div class="toast" id="toast">Email copied</div>
+
+<script>
+  (function(){
+    function fmt(s){
+      if(!isFinite(s) || s == null) return '0:00';
+      s = Math.max(0, Math.floor(s));
+      return Math.floor(s/60) + ':' + ('0' + (s%60)).slice(-2);
+    }
+    var allAudios = [];
+    function setupPlayer(audioId, playBtnId, playIconId, pauseIconId, fillId, trackId, curId, durId){
+      var audio = document.getElementById(audioId);
+      var playBtn = document.getElementById(playBtnId);
+      var playIcon = document.getElementById(playIconId);
+      var pauseIcon = document.getElementById(pauseIconId);
+      var fill = document.getElementById(fillId);
+      var track = document.getElementById(trackId);
+      var curEl = document.getElementById(curId);
+      var durEl = document.getElementById(durId);
+      if(!audio) return;
+      allAudios.push(audio);
+      if(durEl){
+        audio.addEventListener('loadedmetadata', function(){
+          if(isFinite(audio.duration)) durEl.textContent = fmt(audio.duration);
+        });
+        if(audio.readyState >= 1 && isFinite(audio.duration)) durEl.textContent = fmt(audio.duration);
+      }
+      function setPlayingUI(playing){
+        if(playIcon) playIcon.style.display = playing ? 'none' : 'block';
+        if(pauseIcon) pauseIcon.style.display = playing ? 'block' : 'none';
+        if(playBtn) playBtn.setAttribute('aria-label', playing ? 'Pause track' : 'Play track');
+      }
+      var blobTried = false;
+      function enableNativeFallback(){
+        audio.controls = true;
+        audio.classList.add('fallback-native');
+        if(typeof showToast === 'function') showToast('Tap the player controls to play this track');
+      }
+      function attemptBlobFallback(){
+        var url = audio.getAttribute('data-src') || audio.currentSrc || audio.src;
+        if(!window.fetch || !url || url.indexOf('blob:') === 0){ enableNativeFallback(); return; }
+        fetch(url).then(function(r){
+          if(!r.ok) throw new Error('fetch failed');
+          return r.blob();
+        }).then(function(b){
+          var typed = (b && b.type && b.type.indexOf('audio') === 0) ? b : new Blob([b], {type:'audio/mpeg'});
+          audio.src = URL.createObjectURL(typed);
+          audio.load();
+          var p2 = audio.play();
+          if(p2 && p2.catch) p2.catch(function(){ enableNativeFallback(); });
+        }).catch(function(){ enableNativeFallback(); });
+      }
+      function tryPlay(){
+        var p = audio.play();
+        if(p && p.catch){
+          p.catch(function(){
+            if(!blobTried){ blobTried = true; attemptBlobFallback(); }
+            else { enableNativeFallback(); }
+          });
+        }
+      }
+      audio.addEventListener('error', function(){
+        if(audio.networkState === 3 && !blobTried){ blobTried = true; attemptBlobFallback(); }
+        else if(audio.networkState === 3){ enableNativeFallback(); }
+      }, true);
+      if(playBtn){
+        playBtn.addEventListener('click', function(){
+          if(audio.paused){
+            // Pause other players (and the video, if playing)
+            allAudios.forEach(function(a){ if(a !== audio && !a.paused) a.pause(); });
+            var v = document.getElementById('bandVideo');
+            if(v && !v.paused) v.pause();
+            tryPlay();
+          } else {
+            audio.pause();
+          }
+        });
+        audio.addEventListener('play', function(){ setPlayingUI(true); });
+        audio.addEventListener('pause', function(){ setPlayingUI(false); });
+        audio.addEventListener('ended', function(){ setPlayingUI(false); if(fill) fill.style.width='0%'; if(curEl) curEl.textContent='0:00'; if(track) track.setAttribute('aria-valuenow','0'); });
+        audio.addEventListener('timeupdate', function(){
+          if(!isFinite(audio.duration) || !audio.duration) return;
+          var pct = (audio.currentTime / audio.duration) * 100;
+          if(fill) fill.style.width = pct + '%';
+          if(curEl) curEl.textContent = fmt(audio.currentTime);
+          if(track) track.setAttribute('aria-valuenow', String(Math.round(pct)));
+        });
+      }
+      function seekFromEvent(e){
+        if(!isFinite(audio.duration) || !audio.duration) return;
+        var rect = track.getBoundingClientRect();
+        var x = (e.touches && e.touches[0] ? e.touches[0].clientX : e.clientX);
+        var ratio = (x - rect.left) / rect.width;
+        ratio = Math.max(0, Math.min(1, ratio));
+        audio.currentTime = ratio * audio.duration;
+      }
+      if(track){
+        track.addEventListener('click', seekFromEvent);
+        track.addEventListener('keydown', function(e){
+          if(!isFinite(audio.duration)) return;
+          if(e.key === 'ArrowRight'){ e.preventDefault(); audio.currentTime = Math.min(audio.duration, audio.currentTime + 5); }
+          if(e.key === 'ArrowLeft'){ e.preventDefault(); audio.currentTime = Math.max(0, audio.currentTime - 5); }
+          if(e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); if(playBtn) playBtn.click(); }
+        });
+      }
+    }
+
+    setupPlayer('trackAudio','playBtn','playIcon','pauseIcon','progressFill','progressTrack','currentTime','durationLabel');
+    setupPlayer('trackAudio2','playBtn2','playIcon2','pauseIcon2','progressFill2','progressTrack2','currentTime2','durationLabel2');
+    setupPlayer('trackAudio3','playBtn3','playIcon3','pauseIcon3','progressFill3','progressTrack3','currentTime3','durationLabel3');
+    setupPlayer('trackAudio4','playBtn4','playIcon4','pauseIcon4','progressFill4','progressTrack4','currentTime4','durationLabel4');
+    setupPlayer('trackAudio5','playBtn5','playIcon5','pauseIcon5','progressFill5','progressTrack5','currentTime5','durationLabel5');
+
+    var bandVideo = document.getElementById('bandVideo');
+    if(bandVideo){
+      bandVideo.addEventListener('play', function(){
+        allAudios.forEach(function(a){ if(!a.paused) a.pause(); });
+      });
+    }
+
+    var btn = document.getElementById('copyBtn');
+    var toast = document.getElementById('toast');
+    function showToast(msg){
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(function(){ toast.classList.remove('show'); }, 1800);
+    }
+    if(btn){
+      btn.addEventListener('click', function(){
+        var email = 'retrospectband7@gmail.com';
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(email).then(function(){ showToast('Email copied — retrospectband7@gmail.com'); }, function(){ fallback(); });
+        } else { fallback(); }
+        function fallback(){
+          var ta = document.createElement('textarea');
+          ta.value = email; ta.style.position='fixed'; ta.style.opacity='0';
+          document.body.appendChild(ta); ta.select();
+          try{ document.execCommand('copy'); showToast('Email copied — retrospectband7@gmail.com'); }catch(e){ showToast(email); }
+          document.body.removeChild(ta);
+        }
+      });
+    }
+  })();
+</script>
+</body>
+</html>
