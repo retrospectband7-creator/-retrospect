@@ -431,7 +431,7 @@
     opacity:0; pointer-events:none; transition:.2s; z-index:50; box-shadow:var(--shadow-lg);
   }
   .toast.show{opacity:1; transform:translateX(-50%) translateY(0)}
-</style>
+/* Chemistry-style overlay menu */ .menu-btn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin-left:auto;background:transparent;border:1px solid var(--line-strong);border-radius:999px;color:var(--ink);cursor:pointer;font-size:22px;line-height:1} .menu-btn:hover{border-color:var(--brand);color:var(--brand)} .menu-overlay{position:fixed;inset:0;z-index:200;background:#000;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:72px 24px 32px;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease} .menu-overlay.open{opacity:1;visibility:visible} .menu-close{position:absolute;top:18px;right:20px;width:44px;height:44px;border:1px solid rgba(255,255,255,.4);border-radius:999px;background:transparent;color:#fff;font-size:22px;line-height:1;cursor:pointer} .menu-close:hover{border-color:#fff} .menu-list{list-style:none;margin:0;padding:0;text-align:center} .menu-list>li{margin:4px 0} .menu-link{display:inline-block;padding:10px 16px;color:#fff;text-decoration:none;font-family:"DM Serif Display",serif;font-size:clamp(28px,5vw,42px);font-weight:700;letter-spacing:.02em} .menu-link:hover{color:var(--gold)} .menu-drop-btn{background:none;border:0;color:#fff;cursor:pointer;padding:10px 16px;font-family:"DM Serif Display",serif;font-size:clamp(28px,5vw,42px);font-weight:700;letter-spacing:.02em} .menu-drop-btn:hover{color:var(--gold)} .menu-drop-btn .arrow{display:inline-block;font-size:.55em;transition:transform .2s ease} .menu-drop.open .arrow{transform:rotate(180deg)} .menu-sub{list-style:none;margin:0;padding:0;max-height:0;overflow:hidden;transition:max-height .3s ease} .menu-drop.open .menu-sub{max-height:320px} .menu-sub a{display:block;padding:8px 16px;color:rgba(255,255,255,.85);text-decoration:none;font-size:20px} .menu-sub a:hover{color:#fff} .menu-social{margin-top:28px;display:flex;gap:16px;justify-content:center} .menu-social a{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.4);border-radius:999px;color:#fff} .menu-social a:hover{border-color:#fff} .menu-social svg{width:22px;height:22px;fill:currentColor} body.menu-open{overflow:hidden} </style>
 </head>
 <body>
 
@@ -441,17 +441,9 @@
       <img src="images/photo-01.jpg" alt="Retrospect logo" />
       <span>RETROSPECT</span><small>Live Band • Florida</small>
     </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#music">The Music</a>
-      <a href="#videos">Videos</a>
-      <a href="#setlists">Setlists</a>
-      <a href="#shows">Shows</a>
-      <a href="#band">The Band</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#book" class="nav-cta">Book Us</a>
-    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menuOverlay">☰</button>
   </div>
-</header>
+</header><div class="menu-overlay" id="menuOverlay" aria-hidden="true"><button class="menu-close" id="menuClose" aria-label="Close menu">×</button><ul class="menu-list"><li><a class="menu-link" href="#top">Home</a></li><li class="menu-drop"><button class="menu-drop-btn" aria-expanded="false">Media <span class="arrow">▾</span></button><ul class="menu-sub"><li><a href="#videos">Videos</a></li><li><a href="#gallery">Gallery</a></li></ul></li><li><a class="menu-link" href="#shows">Shows</a></li><li><a class="menu-link" href="#music">Songlist</a></li><li class="menu-drop"><button class="menu-drop-btn" aria-expanded="false">The Band <span class="arrow">▾</span></button><ul class="menu-sub"><li><a href="#member-mary-faith">Mary Faith</a></li><li><a href="#member-doy">Doy</a></li><li><a href="#member-bill">Bill</a></li></ul></li><li><a class="menu-link" href="#book">Book Us</a></li></ul><div class="menu-social"><a href="https://www.facebook.com/share/18SVfmnB8u/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Retrospect on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a></div></div>
 
 <main id="top" class="wrap">
 
@@ -515,7 +507,7 @@
 
     <div class="members">
       <!-- Mary Faith -->
-      <article class="member">
+      <article class="member" id="member-mary-faith">
         <div class="member-photo">
           <img src="images/photo-05.jpg" alt="Mary Faith Blanco, lead vocalist of Retrospect" />
           <div class="member-role">Lead Vocals</div>
@@ -530,7 +522,7 @@
       </article>
 
       <!-- Doy -->
-      <article class="member">
+      <article class="member" id="member-doy">
         <div class="member-photo">
           <img src="images/photo-06.jpg" alt="Doy Dela Rosa, keyboardist of Retrospect" />
           <div class="member-role">Keys</div>
@@ -545,7 +537,7 @@
       </article>
 
       <!-- Bill -->
-      <article class="member">
+      <article class="member" id="member-bill">
         <div class="member-photo">
           <img src="images/photo-07.jpg" alt="Bill “Willy Vil”, drummer of Retrospect" />
           <div class="member-role">Drums</div>
@@ -1129,5 +1121,5 @@
     }
   })();
 </script>
-</body>
+<script>(function(){var o=document.getElementById('menuOverlay'),b=document.getElementById('menuBtn'),c=document.getElementById('menuClose');function openMenu(){o.classList.add('open');document.body.classList.add('menu-open');b.setAttribute('aria-expanded','true');o.setAttribute('aria-hidden','false');}function closeMenu(){o.classList.remove('open');document.body.classList.remove('menu-open');b.setAttribute('aria-expanded','false');o.setAttribute('aria-hidden','true');}b.addEventListener('click',openMenu);c.addEventListener('click',closeMenu);o.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});o.querySelectorAll('.menu-drop-btn').forEach(function(btn){btn.addEventListener('click',function(){var d=btn.parentElement;var isOpen=d.classList.toggle('open');btn.setAttribute('aria-expanded',isOpen);});});document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenu();}});})();</script></body>
 </html>
