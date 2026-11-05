@@ -310,6 +310,18 @@
     display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;
   }
   @media (max-width:900px){ .members{grid-template-columns:1fr} }
+  /* Setlists */
+  .setlists{
+    display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;
+  }
+  @media (max-width:900px){ .setlists{grid-template-columns:1fr} }
+  .setlist{
+    background:var(--surface); border:1px solid var(--line); border-radius:22px;
+    box-shadow:var(--shadow); padding:22px 22px 18px;
+  }
+  .setlist h3{margin:0 0 12px; font-size:20px; letter-spacing:-.01em}
+  .setlist ol{margin:0; padding-left:22px; line-height:1.9; color:var(--ink-2)}
+  .setlist li::marker{color:var(--brand); font-weight:700}
   .member{
     background:var(--surface); border:1px solid var(--line); border-radius:22px; overflow:hidden;
     box-shadow:var(--shadow); display:flex; flex-direction:column;
@@ -432,6 +444,7 @@
     <nav class="nav-links" aria-label="Primary">
       <a href="#music">The Music</a>
       <a href="#videos">Videos</a>
+      <a href="#setlists">Setlists</a>
       <a href="#shows">Shows</a>
       <a href="#band">The Band</a>
       <a href="#gallery">Gallery</a>
@@ -580,6 +593,71 @@
           <div class="video-duration">1:01</div>
         </div>
       </div>
+  </section>
+
+  <!-- SETLISTS -->
+  <section id="setlists">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Setlists</div>
+        <h2>What we play.</h2>
+      </div>
+      <p>Three sets of timeless hits, dance favorites, and classic ballads — the songs that keep the floor full.</p>
+    </div>
+
+    <div class="setlists">
+      <article class="setlist">
+        <h3>Setlist 1</h3>
+        <ol>
+          <li>I Will Always Love You</li>
+          <li>Jolene</li>
+          <li>Cold Heart (PNAU remix)</li>
+          <li>Flowers</li>
+          <li>The Best</li>
+          <li>I Will Survive</li>
+          <li>We Are Family (Radio Edit)</li>
+          <li>I Love the Nightlife</li>
+          <li>Believe</li>
+          <li>Ex&apos;s &amp; Oh&apos;s</li>
+          <li>Get on Your Feet</li>
+          <li>Play That Funky Music</li>
+        </ol>
+      </article>
+      <article class="setlist">
+        <h3>Setlist 2</h3>
+        <ol>
+          <li>Hopelessly Devoted to You</li>
+          <li>What&apos;s Up?</li>
+          <li>Separate Ways (Worlds Apart)</li>
+          <li>Billie Jean</li>
+          <li>Like a Virgin</li>
+          <li>Material Girl</li>
+          <li>Crazy Little Thing Called Love</li>
+          <li>Funkytown</li>
+          <li>Man! I Feel Like a Woman!</li>
+          <li>Let&apos;s Get Loud</li>
+          <li>It&apos;s Raining Men</li>
+          <li>Uptown Funk</li>
+        </ol>
+      </article>
+      <article class="setlist">
+        <h3>Setlist 3</h3>
+        <ol>
+          <li>Have I Told You Lately</li>
+          <li>Black Magic Woman / Oye Como Va</li>
+          <li>La Isla Bonita</li>
+          <li>Breakout</li>
+          <li>The Tide Is High</li>
+          <li>Get Down on It</li>
+          <li>Talking in Your Sleep</li>
+          <li>(Shake, Shake, Shake) Shake Your Booty</li>
+          <li>Rhythm Is Gonna Get You</li>
+          <li>Old Time Rock &amp; Roll</li>
+          <li>I Love Rock &apos;n&apos; Roll</li>
+          <li>Last Dance (Single Version)</li>
+        </ol>
+      </article>
+    </div>
   </section>
 
   <!-- BAND -->
